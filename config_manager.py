@@ -7,7 +7,7 @@ from typing import Any, Dict
 class ConfigManager:
     """配置文件管理器"""
 
-    CONFIG_PATH = "C:/config.json"
+    CONFIG_PATH = "D:/config.json"
 
     def __init__(self):
         self._ensure_config_file()
@@ -17,16 +17,7 @@ class ConfigManager:
         if not os.path.exists(self.CONFIG_PATH):
             # 创建默认配置
             default_config = {
-                "window_position": [100, 100],
-                "window_size": [260, 388],
-                "settings": {
-                    "auto_start": False,
-                    "show_tips": True
-                },
-                "user_data": {
-                    "last_input": "",
-                    "favorite_coordinates": []
-                }
+                "window_position": [100, 100]
             }
             self._save_config(default_config)
 
